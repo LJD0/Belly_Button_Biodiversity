@@ -1,2 +1,3 @@
-# Belly_Button_Biodiversity
-Module 13 for OSU Bootcamp
+# Module 13 OSU Bootcamp
+
+Diversity of bacteria inside belly buttons with interactive charts.
