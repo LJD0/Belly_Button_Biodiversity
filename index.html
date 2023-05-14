@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Belly Button Biodiversity</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Belly Button Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/belly.css">
-</head>
-
-<body>
-
-  <div class="container">
-    <div class="row">
-      <div src="static/images/belly_button.jpeg" class="col-md-12 jumbotron text-center">
-        <h1>Belly Button<br>Biodiversity<br>Dashboard</h1>
-        <p>Use the interactive charts.<br>Explore the dataset!</p>
-      </div>
+  <body
+    style="
+      background-color: #1f2630;
+      background-size: 100% 100%;
+      font-family: 'Crete Round', serif;
+    "
+  >
+    <br />
+    <div
+      class="col-md-3 jumbotron text-center"
+      style="
+        background-size: 50% 25%;
+        background-color: #1f2630;
+        background-repeat: no-repeat;
+        color: #fff;
+      "
+    >
+      <h1 style="text-align: center">Belly Button Bacteria Biodiversity</h1>
+      <p style="text-align: right">
+        Use the interactive charts.<br />Explore the dataset!
+      </p>
     </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-2">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+    <br />
+    <div class="container col-md-9">
+      <div class="container">
+        <div class="col-md-3">
+          <div class="panel panel-primary">
+            <div
+              style="background-color: #1f2630; color: white"
+              class="panel-heading"
+            >
+              <h3 class="panel-title">Demographic Info</h3>
+            </div>
+            <div style="background-color: #1f2630" class="well">
+              <h5 style="color: white">Test Subject ID No.:</h5>
+              <select
+                id="selDataset"
+                onchange="optionChanged(this.value)"
+              ></select>
+            </div>
+            <div
+              style="background-color: #1f2630; color: white"
+              id="sample-metadata"
+              class="panel-body"
+            ></div>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
-          <div class="well">
-            <h5>Test Subject ID No.:</h5>
-            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <br />
+        <div class="col-md-9">
+          <div id="bubble"></div>
+        </div>
+
+        <div style="background-color: #1f2630" class="row">
+          <div class="row">
+            <div class="col-md-4">
+              <div id="bar"></div>
+            </div>
+            <div class="col-md-4">
+              <div id="gauge"></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="static/js/charts.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/charts.js"></script>
+  </body>
 </html>
